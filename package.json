@@ -4,7 +4,7 @@
   "description": "A node skeleton for testing with TDD / TCR",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover mocha",
+    "test": "istanbul cover _mocha",
     "tdd": "mocha -w",
     "tcr": "mocha -w"
   },
@@ -22,6 +22,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0"
