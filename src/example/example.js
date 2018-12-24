@@ -1,7 +1,7 @@
 class Example {
   sum(a, b) {
-    //This should be modified to make the test pass
-    return a+b;
+    //This should be corrected before saving!
+    return 7;
   }
 }
 
