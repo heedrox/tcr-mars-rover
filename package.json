@@ -1,0 +1,28 @@
+{
+  "name": "tcr-node-skeleton",
+  "version": "1.0.0",
+  "description": "A node skeleton for testing with TDD / TCR",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover _mocha",
+    "tdd": "./node_modules/.bin/mocha -w"
+  },
+  "keywords": [
+    "tdd",
+    "tcr",
+    "node",
+    "skeleton",
+    "test",
+    "kentbeck"
+  ],
+  "author": "Jordi Martí @itortv",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.2",
+    "sinon-chai": "^3.3.0"
+  }
+}
