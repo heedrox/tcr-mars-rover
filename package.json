@@ -4,8 +4,9 @@
   "description": "A node skeleton for testing with TDD / TCR",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha",
-    "tdd": "./node_modules/.bin/mocha -w"
+    "test": "istanbul cover mocha",
+    "tdd": "mocha -w",
+    "tcr": "mocha -w"
   },
   "keywords": [
     "tdd",
