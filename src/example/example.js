@@ -11,6 +11,7 @@ class Example {
   divide(a,b) {
     return a/b;
   }
+
 }
 
 export default Example;

@@ -17,7 +17,8 @@ function testsFail() {
 
 function commit() {
   try {
-    return execSync(COMMIT_COMMAND);
+    execSync(COMMIT_COMMAND);
+    console.log('commited');
   } catch (err) {
     console.log('commit failed, probably nothing to commit', err);
   }
