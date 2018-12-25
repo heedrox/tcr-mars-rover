@@ -6,7 +6,7 @@
   "scripts": {
     "test": "istanbul cover _mocha",
     "tdd": "mocha -w",
-    "tcr": "mocha -w",
+    "tcr": "node tcr-lib/tcr.js",
     "revert": "git checkout HEAD -- src && git reset HEAD src/ -- && git clean -fd"
   },
   "keywords": [
@@ -25,6 +25,7 @@
     "chai": "^4.2.0",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
+    "node-watch": "^0.5.9",
     "sinon": "^7.2.2",
     "sinon-chai": "^3.3.0"
   }
