@@ -28,8 +28,8 @@ function revert() {
 }
 
 watch(['src/', 'test/'], { recursive: true, filter: WATCH_FILTER }, function (evt, name) {
-  console.log(evt);
-  console.log(name);
+  // console.log(evt);
+  // console.log(name);
   if (testsFail()) {
     console.log('reverting');
     revert();
