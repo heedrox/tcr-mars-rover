@@ -20,7 +20,7 @@ function commit() {
     execSync(COMMIT_COMMAND);
     console.log('commited');
   } catch (err) {
-    console.log('commit failed, probably nothing to commit', err);
+    // console.log('commit failed, probably nothing to commit');
   }
 }
 
@@ -29,7 +29,7 @@ function revert() {
     execSync(REVERT_COMMAND);
     console.log('reverted');
   } catch (err) {
-    console.log('revert failed', err);
+    // console.log('revert failed', err);
   }
 }
 
