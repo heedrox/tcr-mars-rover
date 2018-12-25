@@ -7,6 +7,7 @@
     "test": "istanbul cover _mocha",
     "tdd": "mocha -w",
     "tcr": "node tcr-lib/tcr.js",
+    "commit": "git add --all && git commit -m 'auto commit from tcr'",
     "revert": "git checkout HEAD -- src && git reset HEAD src/ -- && git clean -fd"
   },
   "keywords": [

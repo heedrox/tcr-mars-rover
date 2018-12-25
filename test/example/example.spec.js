@@ -6,7 +6,11 @@ describe('Example file', () => {
 
     const result = example.sum(2,3);
 
-    expect(result).to.equal(7);
+    expect(result).to.equal(5);
+  });
+
+  it('should multiply', () => {
+
   });
 
 });
