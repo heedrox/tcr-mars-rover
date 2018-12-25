@@ -25,7 +25,12 @@ function commit() {
 }
 
 function revert() {
-  return execSync(REVERT_COMMAND);
+  try {
+    execSync(REVERT_COMMAND);
+    console.log('reverted');
+  } catch (err) {
+    console.log('revert failed', err);
+  }
 }
 
 watch(['src/', 'test/'], { recursive: true, filter: WATCH_FILTER }, function (evt, name) {
