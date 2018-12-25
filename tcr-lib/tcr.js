@@ -17,7 +17,8 @@ function testsFail() {
 
 function commit() {
   try {
-    execSync(COMMIT_COMMAND);
+    //TODO silently fail
+    execSync(COMMIT_COMMAND, { stdio: 'pipe' });
     console.log('commited');
   } catch (err) {
     // console.log('commit failed, probably nothing to commit');
