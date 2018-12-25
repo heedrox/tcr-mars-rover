@@ -16,7 +16,11 @@ function testsFail() {
 }
 
 function commit() {
-  return execSync(COMMIT_COMMAND);
+  try {
+    return execSync(COMMIT_COMMAND);
+  } catch (err) {
+    console.log('commit failed, probably nothing to commit', err);
+  }
 }
 
 function revert() {
