@@ -4,7 +4,8 @@
   "description": "A node skeleton for testing with TDD / TCR",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover _mocha",
+    "coverage": "istanbul cover _mocha",
+    "test": "mocha",
     "tdd": "mocha -w",
     "tcr": "node tcr-lib/tcr.js",
     "commit": "git add --all && git commit -m 'auto commit from tcr' && echo 'commited'",

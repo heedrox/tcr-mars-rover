@@ -7,6 +7,10 @@ class Example {
   multiply(a,b) {
     return a*b;
   }
+
+  divide(a,b) {
+    return a/b;
+  }
 }
 
 export default Example;

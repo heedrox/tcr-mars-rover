@@ -16,4 +16,13 @@ describe('Example file', () => {
 
     expect(result).to.equal(6);
   });
+
+  it('should divide', () => {
+    const example = new Example();
+
+    const result = example.divide(6,3);
+
+    expect(result).to.equal(2);
+  });
+
 });
