@@ -10,6 +10,10 @@ describe('Example file', () => {
   });
 
   it('should multiply', () => {
+    const example = new Example();
 
+    const result = example.multiply(2,3);
+
+    expect(result).to.equal(6);
   });
 });
