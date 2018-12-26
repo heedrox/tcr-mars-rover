@@ -9,9 +9,12 @@ const REVERT_COMMAND = 'npm run revert';
 
 function testsFail() {
   try {
-    return parseInt(execSync(TEST_COMMAND));
+    execSync(TEST_COMMAND, {stdio: 'inherit'});
+    console.log('tests ok');
+    return false;
   } catch (err) {
-    return 1;
+    console.log('test failed');
+    return true;
   }
 }
 
