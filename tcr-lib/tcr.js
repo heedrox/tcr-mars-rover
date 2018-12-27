@@ -9,8 +9,8 @@ const REVERT_COMMAND = 'npm run revert';
 
 function testsFail() {
   try {
-    execSync(TEST_COMMAND, {stdio: 'inherit'});
-    console.log('tests ok');
+    const result = execSync(TEST_COMMAND);
+    console.log('tests ok', result.toString('utf8'));
     return false;
   } catch (err) {
     console.log('test failed');
@@ -21,7 +21,7 @@ function testsFail() {
 function commit() {
   try {
     //TODO silently fail
-    execSync(COMMIT_COMMAND, { stdio: 'pipe' });
+    // execSync(COMMIT_COMMAND, { stdio: 'pipe' });
     console.log('commited');
   } catch (err) {
     // console.log('commit failed, probably nothing to commit');

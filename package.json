@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "coverage": "istanbul cover _mocha",
-    "test": "mocha",
+    "test": "mocha --color",
     "tdd": "mocha -w",
     "tcr": "node tcr-lib/tcr.js",
     "commit": "git add --all && git commit -m 'auto commit from tcr' && echo 'commited'",
