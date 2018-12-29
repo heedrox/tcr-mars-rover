@@ -1,4 +1,4 @@
-const getCurrentTestFile = require('../common.js').getCurrentTestFile;
+const getCurrentTestFile = require('../lib/common.js').getCurrentTestFile;
 const execSync = require('child_process').execSync;
 const fs = require('fs');
 

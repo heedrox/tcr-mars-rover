@@ -1,5 +1,5 @@
 const { saveFileContents, getFileContents } = require('../file');
-const { getLastCommitMessageFile } = require('../common');
+const { getLastCommitMessageFile } = require('../lib/common');
 
 const getLastCommitMessage = options => {
   const file = getLastCommitMessageFile(options);
