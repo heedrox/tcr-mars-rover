@@ -15,6 +15,10 @@ class Example {
   substract(a,b) {
     return a-b;
   }
+
+  pow(a,b) {
+    return Math.pow(a,b);
+  }
 }
 
 export default Example;

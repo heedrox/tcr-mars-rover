@@ -32,4 +32,12 @@ describe('Example file', () => {
 
     expect(result).to.equal(4);
   });
+
+  it('should power', () => {
+    const example = new Example();
+
+    const result = example.pow(2,3);
+
+    expect(result).to.equal(8);
+  });
 });
