@@ -1,6 +1,6 @@
 const JsDiff = require('diff');
 const stripAnsi = require('strip-ansi');
-const { getFileContents } = require('../file');
+const { getFileContents } = require('../lib/file');
 const { getCurrentTestFile, getPreviousTestFile } = require('../lib/common');
 
 const byNotExcludedMessages = (excludeRegexs) => (part) => {

@@ -1,6 +1,6 @@
 const execSync = require('child_process').execSync;
 const { getCurrentTestFile, getPreviousTestFile } = require('../lib/common');
-const { swapFiles } = require('../file');
+const { swapFiles } = require('../lib/file');
 const { getCommitMessageFromDiff } = require('./commit-message-diff');
 const { saveLastCommitMessage, getLastCommitMessage } = require('./last-commit');
 

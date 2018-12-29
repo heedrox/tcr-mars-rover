@@ -19,7 +19,6 @@ class Example {
   pow(a,b) {
     return Math.pow(a,b);
   }
-
 }
 
 export default Example;
