@@ -7,7 +7,9 @@ const { saveLastCommitMessage, getLastCommitMessage } = require('./last-commit')
 const getCommitMessage = (options) => {
   const msgFromDiff = getCommitMessageFromDiff(options);
   const commitMessage = msgFromDiff ? msgFromDiff : getLastCommitMessage(options);
-  return commitMessage ? commitMessage : '---';
+  const finalMessage = commitMessage ? commitMessage : '---';
+  console.log('commit message: ', finalMessage);
+  return finalMessage;
 };
 
 const saveTestResultsForLater = (options) => {
@@ -15,16 +17,22 @@ const saveTestResultsForLater = (options) => {
   const previousFile = getPreviousTestFile(options);
   swapFiles(currentFile, previousFile);
 };
+
+const doCommit = (options, message) =>
+  execSync(getCommitCommand(options, message), { stdio: 'pipe' });
+
+const getCommitCommand = (options, message) =>
+  options.commitCommand.replace('{COMMIT_MSG}', message);
+
 const commit = (options) => {
   try {
     const message = getCommitMessage(options);
-    console.log('commit message: ', message);
     saveLastCommitMessage(options, message);
     saveTestResultsForLater(options);
-    execSync(options.commitCommand, { stdio: 'pipe' });
+    doCommit(options, message);
     console.log('commited');
   } catch (err) {
-    // console.log('commit failed, probably nothing to commit');
+    console.log('nothing new to commit');
   }
 };
 
