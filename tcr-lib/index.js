@@ -1,9 +1,9 @@
 const watch = require('node-watch');
 const readline = require('readline');
-const execSync = require('child_process').execSync;
 const init = require('./init.js').init;
 const { getTestsResults } = require('./test');
 const { commit } = require('./commit');
+const { revert } = require('./revert');
 
 const options = {
   tcrDir : '.tcr',
@@ -13,15 +13,6 @@ const options = {
   watchFilter: /.js$/,
   excludeMessageCommit: [/^$/, /^> /, /.* passing \(.*\)$/]
 };
-
-function revert(options) {
-  try {
-    execSync(options.revertCommand);
-    console.log('reverted');
-  } catch (err) {
-    // console.log('revert failed', err);
-  }
-}
 
 init(options);
 watch(['src/', 'test/'], { recursive: true, filter: options.watchFilter }, function (evt, name) {
