@@ -11,8 +11,9 @@ class Example {
   divide(a,b) {
     return a/b;
   }
-  substract(a,b) {
 
+  substract(a,b) {
+    return a-b;
   }
 }
 

@@ -28,6 +28,8 @@ describe('Example file', () => {
   it('should substract', () => {
     const example = new Example();
 
-    expect(example.substract).not.to.be.undefined;
+    const result = example.substract(7,3);
+
+    expect(result).to.equal(4);
   });
 });
