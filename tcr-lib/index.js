@@ -1,10 +1,9 @@
 const watch = require('node-watch');
 const readline = require('readline');
-const fs = require('fs');
 const execSync = require('child_process').execSync;
 const init = require('./init.js').init;
-const { commit } = require('./commit/index.js');
-const getCurrentTestFile = require('./common.js').getCurrentTestFile;
+const { getTestsResults } = require('./test');
+const { commit } = require('./commit');
 
 const options = {
   tcrDir : '.tcr',
@@ -14,20 +13,6 @@ const options = {
   watchFilter: /.js$/,
   excludeMessageCommit: [/^$/, /^> /, /.* passing \(.*\)$/]
 };
-
-function getTestsResults(options) {
-  const resultFile = getCurrentTestFile(options);
-  try {
-    execSync(options.testCommand + ` > ${resultFile} 2>&1` );
-    const resultStr = fs.readFileSync(resultFile);
-    console.log('tests ok', resultStr.toString('utf8'));
-    return true;
-  } catch (err) {
-    const resultStr = fs.readFileSync(resultFile);
-    console.log('test failed', resultStr.toString('utf8'));
-    return null;
-  }
-}
 
 function revert(options) {
   try {
@@ -55,5 +40,13 @@ watch(['src/', 'test/'], { recursive: true, filter: options.watchFilter }, funct
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 process.stdin.on('keypress', (str, key) => {
-  console.log(`You pressed the "${str}" key`, key);
+  if (str === 'p') {
+    console.log('push');
+  }
+  if (key.ctrl && key.name === 'c') {
+    process.exit(); // eslint-disable-line no-process-exit
+  }
+  if (key.name === 'q') {
+    process.exit(); // eslint-disable-line no-process-exit
+  }
 });
