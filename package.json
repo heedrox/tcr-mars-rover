@@ -7,8 +7,8 @@
     "coverage": "istanbul cover _mocha",
     "test": "mocha --color",
     "tdd": "mocha -w",
-    "tcr": "node tcr-lib/tcr.js",
-    "commit": "git add --all && git commit -m 'auto commit from tcr' && echo 'commited'",
+    "tcr": "node tcr-lib/index.js",
+    "commit": "git add --all && git commit -m '{COMMIT_MSG}' && echo 'commited'",
     "revert": "git checkout HEAD -- src && git reset HEAD src/ -- && git clean -fd && echo 'reverted'"
   },
   "keywords": [
@@ -25,10 +25,12 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
+    "diff": "^3.5.0",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
     "node-watch": "^0.5.9",
     "sinon": "^7.2.2",
-    "sinon-chai": "^3.3.0"
+    "sinon-chai": "^3.3.0",
+    "strip-ansi": "^5.0.0"
   }
 }

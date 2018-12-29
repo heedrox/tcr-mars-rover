@@ -25,4 +25,7 @@ describe('Example file', () => {
     expect(result).to.equal(2);
   });
 
+  it('should substract', () => {
+    expect(new Example().substract).not.to.be.undefined;
+  });
 });
