@@ -18,16 +18,15 @@ const saveTestResultsForLater = (options) => {
   swapFiles(currentFile, previousFile);
 };
 
+const strip = message => message.replace('"', '').replace("'", "");
+const getCommitCommand = (options, message) =>
+  options.commitCommand.replace('{COMMIT_MSG}', strip(message));
+
 const doCommit = (options, message) => {
   const commitCommand = getCommitCommand(options, message);
   console.log('commiting: ', commitCommand);
   execSync(commitCommand, { stdio: 'pipe' });
 };
-
-const strip = message => message.replace('"', '').replace("'", "");
-const getCommitCommand = (options, message) =>
-  options.commitCommand.replace('{COMMIT_MSG}', strip(message));
-
 const commit = (options) => {
   try {
     const message = getCommitMessage(options);
