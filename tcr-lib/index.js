@@ -1,4 +1,5 @@
 const watch = require('node-watch');
+const readline = require('readline');
 const fs = require('fs');
 const execSync = require('child_process').execSync;
 const init = require('./init.js').init;
@@ -49,4 +50,10 @@ watch(['src/', 'test/'], { recursive: true, filter: options.watchFilter }, funct
     console.log('reverting');
     revert(options);
   }
+});
+
+readline.emitKeypressEvents(process.stdin);
+process.stdin.setRawMode(true);
+process.stdin.on('keypress', (str, key) => {
+  console.log(`You pressed the "${str}" key`, key);
 });
