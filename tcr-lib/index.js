@@ -8,7 +8,7 @@ const getCurrentTestFile = require('./common.js').getCurrentTestFile;
 const options = {
   tcrDir : '.tcr',
   testCommand: 'npm run test',
-  commitCommand: 'npm run commit',
+  commitCommand: 'COMMIT_MSG="{COMMIT_MSG}" npm run commit',
   revertCommand: 'npm run revert',
   watchFilter: /.js$/,
   excludeMessageCommit: [/^$/, /^> /, /.* passing \(.*\)$/]

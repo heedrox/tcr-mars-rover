@@ -8,7 +8,7 @@
     "test": "mocha --color",
     "tdd": "mocha -w",
     "tcr": "node tcr-lib/index.js",
-    "commit": "git add --all && git commit -m '{COMMIT_MSG}' && echo 'commited'",
+    "commit": "git add --all && git commit -m '$COMMIT_MSG' && echo 'commited'",
     "revert": "git checkout HEAD -- src && git reset HEAD src/ -- && git clean -fd && echo 'reverted'"
   },
   "keywords": [
