@@ -12,7 +12,7 @@ class Example {
     return a/b;
   }
   substract(a,b) {
-    
+
   }
 }
 

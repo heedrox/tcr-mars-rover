@@ -26,6 +26,8 @@ describe('Example file', () => {
   });
 
   it('should substract', () => {
-    expect(new Example().substract).not.to.be.undefined;
+    const example = new Example();
+
+    expect(example.substract).not.to.be.undefined;
   });
 });
