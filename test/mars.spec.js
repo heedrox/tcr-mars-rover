@@ -52,6 +52,7 @@ describe('Mars Rover Kata', () => {
   describe('when turning', () => {
     const cases = [
       { dir: DIRECTIONS.N, command: 'l', expectedDir: DIRECTIONS.W },
+      { dir: DIRECTIONS.W, command: 'l', expectedDir: DIRECTIONS.S },
     ];
     cases.forEach((tcase) => {
       it(`executes turn - case ${tcase.dir} / ${tcase.command}`, () => {

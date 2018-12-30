@@ -15,6 +15,7 @@ const COMMANDS = {
   },
   'l': {
     [DIRECTIONS.N]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.W }),
+    [DIRECTIONS.W]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.S }),
   }
 };
 
