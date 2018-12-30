@@ -1,8 +1,9 @@
 class MarsRover {
 
-  constructor(position) {
+  constructor(position, direction) {
     this.x = position.x;
     this.y = position.y;
+    this.direction = direction;
   }
 }
 

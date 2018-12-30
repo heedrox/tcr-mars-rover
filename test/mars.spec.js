@@ -9,10 +9,9 @@ describe('Mars Rover Kata', () => {
       expect(marsRover.y).to.equal(0);
     });
     it('sets facing direction', () => {
-      const marsRover = new MarsRover({x: 0, y: 0});
+      const marsRover = new MarsRover({x: 0, y: 0}, 'N');
 
-      expect(marsRover.x).to.equal(0);
-      expect(marsRover.y).to.equal(0);
+      expect(marsRover.direction).to.equal('N');
     });
   });
 });
