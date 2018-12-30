@@ -14,6 +14,8 @@ class MarsRover {
       this.y = this.y - 1;
     } else if (this.direction === DIRECTIONS.W) {
       this.x = this.x - 1;
+    } else if (this.direction === DIRECTIONS.E) {
+      this.x = this.x + 1;
     }
   }
 }
