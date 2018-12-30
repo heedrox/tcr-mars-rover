@@ -88,4 +88,8 @@ describe('Mars Rover Kata', () => {
       expect(marsRover.y).to.equal(1);
     });
   });
+
+  describe('obstacle detection', () => {
+
+  });
 });
