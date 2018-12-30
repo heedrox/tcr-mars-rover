@@ -15,12 +15,13 @@ class MarsRover {
   }
 
   stopAndThrowErrorIfObstacle(newPos) {
+    const byPos = newPos => obstacle => ((newPos.x === obstacle.x) && (newPos.y === obstacle.y));
+    const findByPos = () => this.obstacles.find(byPos(newPos));
     const findIt = newPos => ((newPos.x === this.obstacles[0].x)&&(newPos.y === this.obstacles[0].y)) ||
       ((newPos.x === this.obstacles[1].x)&&(newPos.y === this.obstacles[1].y));
     if (this.obstacles && findIt(newPos)) {
       throw new Error();
     }
-    
   }
 
   executeCommand(command) {
