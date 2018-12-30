@@ -1,7 +1,5 @@
 const { COMMANDS } = require('./commands');
 
-const isMoveCommand = command => (Object.keys(COMMANDS).indexOf(command) >= 0);
-
 class MarsRover {
 
   constructor(position, direction) {
