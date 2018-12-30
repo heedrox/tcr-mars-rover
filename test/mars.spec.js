@@ -70,4 +70,10 @@ describe('Mars Rover Kata', () => {
       });
     });
   });
+
+  describe('when moving off the grid', () => {
+    it('shows in the other side', () => {
+      
+    });
+  });
 });

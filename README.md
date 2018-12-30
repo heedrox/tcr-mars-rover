@@ -46,3 +46,4 @@ And to test also tcr-cli.
 - Tests passing are a free moment => refactors and everything are cool
 - Synchronize all the time (mainly when refactor and fail) command + alt + Y
 - Ejemplo isMovingCommand and isMoveCommand => he ido generndo la otra, y cuando ya he visto que compilaba, la he swapeado.
+- Veo menos el mensaje de error, ya que ya sé cuál es (excepto excepciones)
