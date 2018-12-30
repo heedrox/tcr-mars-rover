@@ -1,3 +1,4 @@
+const DIRECTIONS = require('../src/constants');
 const MarsRover = require('../src/mars');
 
 describe('Mars Rover Kata', () => {
