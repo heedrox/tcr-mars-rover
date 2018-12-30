@@ -37,6 +37,7 @@ describe('Mars Rover Kata', () => {
   describe('when moving backwards', () => {
     const cases = [
       { pos: { x: 5, y: 5 }, dir: DIRECTIONS.N, command: 'b', expected: { x: 5, y: 4 } },
+      { pos: { x: 5, y: 4 }, dir: DIRECTIONS.N, command: 'b', expected: { x: 5, y: 3 } },
     ];
     cases.forEach((tcase) => {
       it(`moves - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
