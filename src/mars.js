@@ -1,3 +1,4 @@
+const byPos = newPos => obstacle => ((newPos.x === obstacle.x) && (newPos.y === obstacle.y));
 class MarsRover {
 
   constructor(position, direction, commands, obstacles) {
@@ -15,7 +16,6 @@ class MarsRover {
   }
 
   stopAndThrowErrorIfObstacle(newPos) {
-    const byPos = newPos => obstacle => ((newPos.x === obstacle.x) && (newPos.y === obstacle.y));
     const findByPos = (newPos) => this.obstacles.find(byPos(newPos));
     if (this.obstacles && findByPos(newPos)) {
       throw new Error();
