@@ -18,6 +18,10 @@ class Example {
   pow(a,b) {
     return Math.pow(a,b);
   }
+
+  sqrt(a) {
+    
+  }
 }
 
 export default Example;

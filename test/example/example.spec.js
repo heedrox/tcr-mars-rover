@@ -40,4 +40,11 @@ describe('Example file', () => {
 
     expect(result).to.equal(8);
   });
+
+  it('should do sqr rt', () => {
+    const example = new Example();
+
+    expect(example.sqrt).not.to.be.undefined;
+  });
+
 });
