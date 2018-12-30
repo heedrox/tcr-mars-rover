@@ -1,5 +1,5 @@
 const watch = require('node-watch');
-const readline = require('readline');
+const readkey = require('readkey');
 const init = require('./init.js').init;
 const { getTestsResults } = require('./test');
 const { commit } = require('./commit');
@@ -30,16 +30,9 @@ watch(['src/', 'test/'], { recursive: true, filter: options.watchFilter }, funct
   }
 });
 
-readline.emitKeypressEvents(process.stdin);
-process.stdin.setRawMode(true);
-process.stdin.on('keypress', (str, key) => {
-  if (str === 'p') {
-    push(options);
-  }
-  if (key.ctrl && key.name === 'c') {
-    process.exit();
-  }
-  if (key.name === 'q') {
-    process.exit();
-  }
-});
+const keyCommands = [
+  { fn: (str,key) => str==='p', command: () => push(options) },
+  { fn: (str,key) => key.ctrl && key.name === 'c', command: () => process.exit() },
+  { fn: (str,key) => key.name === 'q', command: () => process.exit() },
+];
+readkey(keyCommands);
