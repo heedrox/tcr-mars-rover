@@ -19,9 +19,10 @@ describe('Mars Rover Kata', () => {
     const cases = [
       { pos: { x: 5, y: 5 }, dir: DIRECTIONS.N, command: 'f', expected: { x: 5, y: 6 } },
       { pos: { x: 5, y: 4 }, dir: DIRECTIONS.N, command: 'f', expected: { x: 5, y: 5 } },
+      { pos: { x: 5, y: 4 }, dir: DIRECTIONS.S, command: 'f', expected: { x: 5, y: 3 } },
     ];
     cases.forEach((tcase) => {
-      it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.command}`, () => {
+      it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
         const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir);
 
         marsRover.move(['f']);
