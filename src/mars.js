@@ -2,16 +2,16 @@ const { DIRECTIONS } = require('./constants');
 
 const moveCommands = {
   'f': {
-    [DIRECTIONS.N]: (x, y, dir) => ({ x, y: y + 1, dir }),
-    [DIRECTIONS.S]: (x, y, dir) => ({ x, y: y - 1, dir }),
-    [DIRECTIONS.W]: (x, y, dir) => ({ x: x - 1, y, dir }),
-    [DIRECTIONS.E]: (x, y, dir) => ({ x: x + 1, y, dir }),
+    [DIRECTIONS.N]: (x, y, direction) => ({ x, y: y + 1, direction }),
+    [DIRECTIONS.S]: (x, y, direction) => ({ x, y: y - 1, direction }),
+    [DIRECTIONS.W]: (x, y, direction) => ({ x: x - 1, y, direction }),
+    [DIRECTIONS.E]: (x, y, direction) => ({ x: x + 1, y, direction }),
   },
   'b': {
-    [DIRECTIONS.N]: (x, y, dir) => ({ x, y: y - 1, dir }),
-    [DIRECTIONS.S]: (x, y, dir) => ({ x, y: y + 1, dir }),
-    [DIRECTIONS.W]: (x, y, dir) => ({ x: x + 1, y, dir }),
-    [DIRECTIONS.E]: (x, y, dir) => ({ x: x - 1, y, dir }),
+    [DIRECTIONS.N]: (x, y, direction) => ({ x, y: y - 1, direction }),
+    [DIRECTIONS.S]: (x, y, direction) => ({ x, y: y + 1, direction }),
+    [DIRECTIONS.W]: (x, y, direction) => ({ x: x + 1, y, direction }),
+    [DIRECTIONS.E]: (x, y, direction) => ({ x: x - 1, y, direction }),
   },
 };
 
@@ -28,7 +28,7 @@ class MarsRover {
   moveTo(newPos) {
     this.x = newPos.x;
     this.y = newPos.y;
-    this.direction = newPos.dir;
+    this.direction = newPos.direction;
   }
 
   executeCommand(command) {
