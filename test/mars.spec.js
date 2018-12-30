@@ -1,0 +1,2 @@
+describe('Mars Rover Kata', () => {
+});
