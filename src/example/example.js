@@ -20,7 +20,7 @@ class Example {
   }
 
   sqrt(a) {
-    
+    return Math.sqrt(a);
   }
 }
 

@@ -44,7 +44,9 @@ describe('Example file', () => {
   it('should do sqr rt', () => {
     const example = new Example();
 
-    expect(example.sqrt).not.to.be.undefined;
+    const result = example.sqrt(16);
+
+    expect(result).to.equal(4);
   });
 
 });
