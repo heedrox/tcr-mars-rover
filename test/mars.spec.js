@@ -40,4 +40,12 @@ describe('Mars Rover Kata', () => {
       });
     });
   });
+
+  it('executes several commands', () => {
+    const marsRover = new MarsRover({ x: 5, y: 5 }, DIRECTIONS.N);
+
+    marsRover.execute(['f','f']);
+
+    expect(marsRover.y).to.equal(7);
+  });
 });

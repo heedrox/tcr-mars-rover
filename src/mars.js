@@ -9,27 +9,29 @@ class MarsRover {
   }
 
   execute(commands) {
-    if (commands[0] === 'f') {
-      if (this.direction === DIRECTIONS.N) {
-        this.y = this.y + 1;
-      } else if (this.direction === DIRECTIONS.S) {
-        this.y = this.y - 1;
-      } else if (this.direction === DIRECTIONS.W) {
-        this.x = this.x - 1;
-      } else if (this.direction === DIRECTIONS.E) {
-        this.x = this.x + 1;
+    commands.forEach((command) => {
+      if (command === 'f') {
+        if (this.direction === DIRECTIONS.N) {
+          this.y = this.y + 1;
+        } else if (this.direction === DIRECTIONS.S) {
+          this.y = this.y - 1;
+        } else if (this.direction === DIRECTIONS.W) {
+          this.x = this.x - 1;
+        } else if (this.direction === DIRECTIONS.E) {
+          this.x = this.x + 1;
+        }
+      } else {
+        if (this.direction === DIRECTIONS.N) {
+          this.y = this.y - 1;
+        } else if (this.direction === DIRECTIONS.S) {
+          this.y = this.y + 1;
+        } else if (this.direction === DIRECTIONS.W) {
+          this.x = this.x + 1;
+        } else if (this.direction === DIRECTIONS.E) {
+          this.x = this.x - 1;
+        }
       }
-    } else {
-      if (this.direction === DIRECTIONS.N) {
-        this.y = this.y - 1;
-      } else if (this.direction === DIRECTIONS.S) {
-        this.y = this.y + 1;
-      } else if (this.direction === DIRECTIONS.W) {
-        this.x = this.x + 1;
-      } else if (this.direction === DIRECTIONS.E) {
-        this.x = this.x - 1;
-      }
-    }
+    });
   }
 }
 
