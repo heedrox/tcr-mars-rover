@@ -49,7 +49,7 @@ describe('Mars Rover Kata', () => {
     expect(marsRover.y).to.equal(7);
   });
 
-  describe.skip('when turning', () => {
+  describe('when turning', () => {
     const cases = [
       { dir: DIRECTIONS.N, command: 'l', expectedDir: DIRECTIONS.W },
     ];
