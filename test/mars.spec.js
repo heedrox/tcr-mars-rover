@@ -75,9 +75,9 @@ describe('Mars Rover Kata', () => {
     it('shows in the other side horizontally', () => {
       const marsRover = new MarsRover({ x: 10, y: 5 }, DIRECTIONS.E);
 
-      marsRover.execute(['f']);
+      marsRover.execute(['f', 'f']);
 
-      expect(marsRover.x).to.equal(0);
+      expect(marsRover.x).to.equal(1);
     });
   });
 });
