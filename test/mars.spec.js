@@ -1,4 +1,4 @@
-const DIRECTIONS = require('../src/constants');
+const { DIRECTIONS } = require('../src/constants');
 const MarsRover = require('../src/mars');
 
 describe('Mars Rover Kata', () => {
@@ -22,7 +22,7 @@ describe('Mars Rover Kata', () => {
     ];
     cases.forEach((tcase) => {
       it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.command}`, () => {
-        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, 'N');
+        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, DIRECTIONS.N);
 
         marsRover.move(['f']);
 
