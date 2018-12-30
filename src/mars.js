@@ -1,5 +1,9 @@
 const { DIRECTIONS } = require('./constants');
 
+const moveCommands = {
+  [DIRECTIONS.N]: (x, y) => (x, y + 1),
+};
+
 class MarsRover {
 
   constructor(position, direction) {
