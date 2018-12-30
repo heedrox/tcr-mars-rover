@@ -72,8 +72,12 @@ describe('Mars Rover Kata', () => {
   });
 
   describe('when moving off the grid', () => {
-    it('shows in the other side', () => {
-      
+    it('shows in the other side horizontally', () => {
+      const marsRover = new MarsRover({ x: 10, y: 5 }, DIRECTIONS.E);
+
+      marsRover.execute(['f']);
+
+      expect(marsRover.x).to.equal(0);
     });
   });
 });

@@ -9,7 +9,7 @@ class MarsRover {
   }
 
   moveTo(newPos) {
-    this.x = newPos.x;
+    this.x = newPos.x > 10 ? 0 : newPos.x;
     this.y = newPos.y;
     this.direction = newPos.direction;
   }
