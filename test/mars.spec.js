@@ -118,5 +118,18 @@ describe('Mars Rover Kata', () => {
         marsRover.execute(['f', 'f']);
       }).to.throw();
     });
+
+    it('moves until last point', () => {
+      const marsRover = new MarsRover({ x: 2, y: 6 }, DIRECTIONS.N, COMMANDS, [
+        {x: 3, y: 10},
+        {x: 2, y: 8},
+      ]);
+
+      expect(() => {
+        marsRover.execute(['f', 'f', 'f']);
+      }).to.throw();
+
+      expect(marsRover.x).to.equal(2);
+    });
   });
 });
