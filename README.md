@@ -45,6 +45,9 @@ And to test also tcr-cli.
 - I thought it was going to be a problem when saving multiple files, but it is not (because of watch delay)
 - Tests passing are a free moment => refactors and everything are cool
 - Synchronize all the time (mainly when refactor and fail) command + alt + Y
-- Ejemplo isMovingCommand and isMoveCommand => he ido generndo la otra, y cuando ya he visto que compilaba, la he swapeado.
+- Ejemplo isMovingCommand and isMoveCommand => he ido generando la otra, y cuando ya he visto que compilaba, la he swapeado.
 - Veo menos el mensaje de error, ya que ya sé cuál es (excepto excepciones)
 - console.log makes it appear in your log commit.
+(For Mars Kata Reflections)
+- I implemented the detection of obstacle signaling through Exception.
+- I dont think obstacles should be injected, should they? whose responsability is the obstacle detection?
