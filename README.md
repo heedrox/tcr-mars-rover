@@ -42,7 +42,7 @@ And to test also tcr-cli.
 
 - Generally forces you to create two tests (the dummy and the one that really validates)
 - The commit history is based on test cases, and I think that's cool (the problem are refactors)
-
-
+- I thought it was going to be a problem when saving multiple files, but it is not (because of watch delay)
+- Tests passing are a free moment => refactors and everything are cool
 
 
