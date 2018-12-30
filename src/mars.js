@@ -15,7 +15,9 @@ class MarsRover {
   }
 
   stopAndThrowErrorIfObstacle(newPos) {
-    if (this.obstacles && ((newPos.x === this.obstacles[0].x)&&(newPos.y === this.obstacles[0].y))) {
+    const findIt = newPos => ((newPos.x === this.obstacles[0].x)&&(newPos.y === this.obstacles[0].y)) ||
+      ((newPos.x === this.obstacles[1].x)&&(newPos.y === this.obstacles[1].y));
+    if (this.obstacles && findIt(newPos)) {
       throw new Error();
     }
   }

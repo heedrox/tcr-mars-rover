@@ -107,5 +107,16 @@ describe('Mars Rover Kata', () => {
         marsRover.execute(['f', 'f']);
       }).to.throw();
     });
+
+    it('throws error when obstacle found - case 2', () => {
+      const marsRover = new MarsRover({ x: 2, y: 7 }, DIRECTIONS.N, COMMANDS, [
+        {x: 3, y: 10},
+        {x: 2, y: 8},
+      ]);
+
+      expect(() => {
+        marsRover.execute(['f', 'f']);
+      }).to.throw();
+    });
   });
 });
