@@ -97,5 +97,7 @@ describe('Mars Rover Kata', () => {
 
       expect(marsRover.obstacles).to.eql(OBSTACLES);
     });
+
+    it('')
   });
 });
