@@ -7,7 +7,7 @@ class MarsRover {
   }
 
   move() {
-    this.y = 6;
+    this.y = this.y + 1;
   }
 }
 
