@@ -29,8 +29,10 @@ class MarsRover {
   }
 
   executeCommand(command) {
-    const newPos = moveCommands[command][this.direction](this.x, this.y);
-    this.moveTo(newPos);
+    if ((command === 'f')||(command === 'b')) {
+      const newPos = moveCommands[command][this.direction](this.x, this.y);
+      this.moveTo(newPos);
+    }
   }
 
   execute(commands) {
