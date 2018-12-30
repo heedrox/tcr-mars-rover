@@ -1,7 +1,10 @@
 const { DIRECTIONS } = require('./constants');
 
 const moveCommands = {
-  [DIRECTIONS.N]: (x, y) => (x, y + 1),
+  [DIRECTIONS.N]: (x, y) => ({ x, y: y + 1 }),
+  [DIRECTIONS.S]: (x, y) => ({ x, y: y - 1 }),
+  [DIRECTIONS.W]: (x, y) => ({ x: x - 1, y }),
+  [DIRECTIONS.E]: (x, y) => ({ x: x + 1, y }),
 };
 
 class MarsRover {
