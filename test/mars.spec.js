@@ -95,7 +95,7 @@ describe('Mars Rover Kata', () => {
     it('initializes with obstacles', () => {
       const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS, OBSTACLES);
 
-      expect(marsRover.obstacles).to.equal(OBSTACLES);
+      expect(marsRover.obstacles).to.eql(OBSTACLES);
     });
   });
 });
