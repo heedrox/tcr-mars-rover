@@ -1,4 +1,5 @@
 const { DIRECTIONS } = require('./constants');
+
 class MarsRover {
 
   constructor(position, direction) {
@@ -21,6 +22,8 @@ class MarsRover {
     } else {
       if (this.direction === DIRECTIONS.N) {
         this.y = this.y - 1;
+      } else if (this.direction === DIRECTIONS.S) {
+        this.y = this.y + 1;
       }
     }
   }
