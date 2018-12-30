@@ -8,30 +8,32 @@ class MarsRover {
     this.direction = direction;
   }
 
-  execute(commands) {
-    commands.forEach((command) => {
-      if (command === 'f') {
-        if (this.direction === DIRECTIONS.N) {
-          this.y = this.y + 1;
-        } else if (this.direction === DIRECTIONS.S) {
-          this.y = this.y - 1;
-        } else if (this.direction === DIRECTIONS.W) {
-          this.x = this.x - 1;
-        } else if (this.direction === DIRECTIONS.E) {
-          this.x = this.x + 1;
-        }
-      } else {
-        if (this.direction === DIRECTIONS.N) {
-          this.y = this.y - 1;
-        } else if (this.direction === DIRECTIONS.S) {
-          this.y = this.y + 1;
-        } else if (this.direction === DIRECTIONS.W) {
-          this.x = this.x + 1;
-        } else if (this.direction === DIRECTIONS.E) {
-          this.x = this.x - 1;
-        }
+  executeCommand(command) {
+    if (command === 'f') {
+      if (this.direction === DIRECTIONS.N) {
+        this.y = this.y + 1;
+      } else if (this.direction === DIRECTIONS.S) {
+        this.y = this.y - 1;
+      } else if (this.direction === DIRECTIONS.W) {
+        this.x = this.x - 1;
+      } else if (this.direction === DIRECTIONS.E) {
+        this.x = this.x + 1;
       }
-    });
+    } else {
+      if (this.direction === DIRECTIONS.N) {
+        this.y = this.y - 1;
+      } else if (this.direction === DIRECTIONS.S) {
+        this.y = this.y + 1;
+      } else if (this.direction === DIRECTIONS.W) {
+        this.x = this.x + 1;
+      } else if (this.direction === DIRECTIONS.E) {
+        this.x = this.x - 1;
+      }
+    }
+  }
+
+  execute(commands) {
+    commands.forEach((command) => this.executeCommand(command));
   }
 }
 
