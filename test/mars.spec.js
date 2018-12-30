@@ -15,12 +15,15 @@ describe('Mars Rover Kata', () => {
     });
   });
   describe('when moving', () => {
-    it('moves forward', () => {
-      const marsRover = new MarsRover({ x: 5, y: 5 }, 'N');
+    const cases = [ { pos: { x: 5, y: 5 }, command: 'f'} ];
+    cases.forEach((tcase) => {
+      it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.command}`, () => {
+        const marsRover = new MarsRover({ x: 5, y: 5 }, 'N');
 
-      marsRover.move(['f']);
+        marsRover.move(['f']);
 
-      expect(marsRover.y).to.equal(6);
+        expect(marsRover.y).to.equal(6);
+      });
     });
   });
 });

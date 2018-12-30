@@ -40,7 +40,7 @@ And to test also tcr-cli.
 
 # Learnings and Reflections
 
-
+- Generally forces you to create two tests (the dummy and the one that really validates)
 
 
 
