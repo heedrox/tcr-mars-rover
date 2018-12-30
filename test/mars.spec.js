@@ -22,7 +22,7 @@ describe('Mars Rover Kata', () => {
     ];
     cases.forEach((tcase) => {
       it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.command}`, () => {
-        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, DIRECTIONS.N);
+        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir);
 
         marsRover.move(['f']);
 
