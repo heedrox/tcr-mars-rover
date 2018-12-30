@@ -90,6 +90,12 @@ describe('Mars Rover Kata', () => {
   });
 
   describe('obstacle detection', () => {
+    it('constructs with obstacles', () => {
+      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, []);
 
+      marsRover.execute(['f', 'f']);
+
+      expect(marsRover.y).to.equal(1);
+    });
   });
 });
