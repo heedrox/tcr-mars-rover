@@ -25,6 +25,8 @@ describe('Mars Rover Kata', () => {
       { pos: { x: 5, y: 5 }, dir: DIRECTIONS.N, command: 'b', expected: { x: 5, y: 4 } },
       { pos: { x: 5, y: 4 }, dir: DIRECTIONS.N, command: 'b', expected: { x: 5, y: 3 } },
       { pos: { x: 5, y: 4 }, dir: DIRECTIONS.S, command: 'b', expected: { x: 5, y: 5 } },
+      { pos: { x: 5, y: 4 }, dir: DIRECTIONS.W, command: 'b', expected: { x: 6, y: 4 } },
+      { pos: { x: 5, y: 4 }, dir: DIRECTIONS.E, command: 'b', expected: { x: 4, y: 4 } },
 
     ];
     cases.forEach((tcase) => {
