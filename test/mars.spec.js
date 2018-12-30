@@ -18,7 +18,7 @@ describe('Mars Rover Kata', () => {
     it('moves forward', () => {
       const marsRover = new MarsRover({x: 5, y: 5}, 'N');
 
-      marsRover.move();
+      marsRover.move(['F']);
 
       expect(marsRover.y).to.equal(6);
     });
