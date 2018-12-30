@@ -92,7 +92,7 @@ describe('Mars Rover Kata', () => {
   });
 
   describe('obstacle detection', () => {
-    it('constructs with obstacles', () => {
+    it('initializes with obstacles', () => {
       const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS, OBSTACLES);
 
       marsRover.execute(['f', 'f']);
