@@ -130,6 +130,7 @@ describe('Mars Rover Kata', () => {
       }).to.throw();
 
       expect(marsRover.x).to.equal(2);
+      expect(marsRover.y).to.equal(7);
     });
   });
 });
