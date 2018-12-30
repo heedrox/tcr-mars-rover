@@ -1,5 +1,6 @@
 const { DIRECTIONS } = require('../src/constants');
 const { COMMANDS } = require('../src/commands');
+const { OBSTACLES } = require('../src/obstacles');
 const MarsRover = require('../src/mars');
 
 describe('Mars Rover Kata', () => {
@@ -92,11 +93,11 @@ describe('Mars Rover Kata', () => {
 
   describe('obstacle detection', () => {
     it('constructs with obstacles', () => {
-      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS);
+      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS, OBSTACLES);
 
       marsRover.execute(['f', 'f']);
 
-      expect(marsRover.y).to.equal(1);
+      expect(marsRover.obstacles).to.equal(OBSTACLES);
     });
   });
 });

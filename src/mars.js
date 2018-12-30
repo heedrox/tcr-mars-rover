@@ -1,10 +1,11 @@
 class MarsRover {
 
-  constructor(position, direction, commands) {
+  constructor(position, direction, commands, obstacles) {
     this.x = position.x;
     this.y = position.y;
     this.direction = direction;
     this.commands = commands;
+    this.obstacles = obstacles;
   }
 
   moveTo(newPos) {
