@@ -10,8 +10,10 @@ class MarsRover {
   move() {
     if (this.direction === DIRECTIONS.N) {
       this.y = this.y + 1;
-    } else {
+    } else if (this.direction === DIRECTIONS.S) {
       this.y = this.y - 1;
+    } else if (this.direction === DIRECTIONS.W) {
+      this.x = this.x - 1;
     }
   }
 }

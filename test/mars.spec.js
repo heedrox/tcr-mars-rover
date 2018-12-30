@@ -20,6 +20,7 @@ describe('Mars Rover Kata', () => {
       { pos: { x: 5, y: 5 }, dir: DIRECTIONS.N, command: 'f', expected: { x: 5, y: 6 } },
       { pos: { x: 5, y: 4 }, dir: DIRECTIONS.N, command: 'f', expected: { x: 5, y: 5 } },
       { pos: { x: 5, y: 4 }, dir: DIRECTIONS.S, command: 'f', expected: { x: 5, y: 3 } },
+      { pos: { x: 5, y: 4 }, dir: DIRECTIONS.W, command: 'f', expected: { x: 4, y: 4 } },
     ];
     cases.forEach((tcase) => {
       it(`moves forward - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
