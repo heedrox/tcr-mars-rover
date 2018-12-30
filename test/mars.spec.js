@@ -30,7 +30,7 @@ describe('Mars Rover Kata', () => {
         expect(marsRover.y).to.equal(tcase.expected.y);
       });
     });
-    it('moves forward based on the direction', () => {
+    it('moves forward based on the direction S', () => {
       const marsRover = new MarsRover({ x: 5, y: 5 }, DIRECTIONS.S);
 
       marsRover.move(['f']);
