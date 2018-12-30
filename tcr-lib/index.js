@@ -4,12 +4,14 @@ const init = require('./init.js').init;
 const { getTestsResults } = require('./test');
 const { commit } = require('./commit');
 const { revert } = require('./revert');
+const { push } = require('./push');
 
 const options = {
   tcrDir : '.tcr',
   testCommand: 'npm run test',
   commitCommand: 'COMMIT_MSG="{COMMIT_MSG}" npm run commit',
   revertCommand: 'npm run revert',
+  pushCommand: 'npm run push',
   watchFilter: /.js$/,
   excludeMessageCommit: [/^$/, /^> /, /.* passing \(.*\)$/]
 };
@@ -32,12 +34,12 @@ readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 process.stdin.on('keypress', (str, key) => {
   if (str === 'p') {
-    console.log('push');
+    push(options);
   }
   if (key.ctrl && key.name === 'c') {
-    process.exit(); // eslint-disable-line no-process-exit
+    process.exit();
   }
   if (key.name === 'q') {
-    process.exit(); // eslint-disable-line no-process-exit
+    process.exit();
   }
 });
