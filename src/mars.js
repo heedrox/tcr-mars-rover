@@ -20,6 +20,7 @@ class MarsRover {
     if (this.obstacles && findIt(newPos)) {
       throw new Error();
     }
+    
   }
 
   executeCommand(command) {
