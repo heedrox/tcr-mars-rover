@@ -44,5 +44,5 @@ And to test also tcr-cli.
 - The commit history is based on test cases, and I think that's cool (the problem are refactors)
 - I thought it was going to be a problem when saving multiple files, but it is not (because of watch delay)
 - Tests passing are a free moment => refactors and everything are cool
-- Synchronize all the time (mainly when refactor and fail)
+- Synchronize all the time (mainly when refactor and fail) command + alt + Y
 - Ejemplo isMovingCommand and isMoveCommand => he ido generndo la otra, y cuando ya he visto que compilaba, la he swapeado.

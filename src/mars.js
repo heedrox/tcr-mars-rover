@@ -28,6 +28,7 @@ class MarsRover {
   moveTo(newPos) {
     this.x = newPos.x;
     this.y = newPos.y;
+
   }
 
   executeCommand(command) {
