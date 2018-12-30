@@ -20,7 +20,6 @@ class MarsRover {
       const result = moveCommands[this.direction](this.x, this.y);
       this.x = result.x;
       this.y = result.y;
-
     } else {
       if (this.direction === DIRECTIONS.N) {
         this.y = this.y - 1;
