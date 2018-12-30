@@ -16,7 +16,6 @@ const moveCommands = {
 };
 
 const isMoveCommand = command => (Object.keys(moveCommands).indexOf(command) >= 0);
-const isMovingCommand = command => ((command === 'f')||(command === 'b'));
 
 class MarsRover {
 
