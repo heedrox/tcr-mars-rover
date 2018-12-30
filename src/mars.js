@@ -18,15 +18,9 @@ class MarsRover {
   executeCommand(command) {
     if (command === 'f') {
       const result = moveCommands[this.direction](this.x, this.y);
-      if (this.direction === DIRECTIONS.N) {
-        this.y = this.y + 1;
-      } else if (this.direction === DIRECTIONS.S) {
-        this.y = this.y - 1;
-      } else if (this.direction === DIRECTIONS.W) {
-        this.x = this.x - 1;
-      } else if (this.direction === DIRECTIONS.E) {
-        this.x = this.x + 1;
-      }
+      this.x = result.x;
+      this.y = result.y;
+
     } else {
       if (this.direction === DIRECTIONS.N) {
         this.y = this.y - 1;
