@@ -45,4 +45,4 @@ And to test also tcr-cli.
 - I thought it was going to be a problem when saving multiple files, but it is not (because of watch delay)
 - Tests passing are a free moment => refactors and everything are cool
 - Synchronize all the time (mainly when refactor and fail)
-
+- Ejemplo isMovingCommand and isMoveCommand => he ido generndo la otra, y cuando ya he visto que compilaba, la he swapeado.

@@ -2,16 +2,16 @@ const { DIRECTIONS } = require('./constants');
 
 const moveCommands = {
   'f': {
-    [DIRECTIONS.N]: (x, y) => ({ x, y: y + 1 }),
-    [DIRECTIONS.S]: (x, y) => ({ x, y: y - 1 }),
-    [DIRECTIONS.W]: (x, y) => ({ x: x - 1, y }),
-    [DIRECTIONS.E]: (x, y) => ({ x: x + 1, y }),
+    [DIRECTIONS.N]: (x, y, dir) => ({ x, y: y + 1, dir }),
+    [DIRECTIONS.S]: (x, y, dir) => ({ x, y: y - 1, dir }),
+    [DIRECTIONS.W]: (x, y, dir) => ({ x: x - 1, y, dir }),
+    [DIRECTIONS.E]: (x, y, dir) => ({ x: x + 1, y, dir }),
   },
   'b': {
-    [DIRECTIONS.N]: (x, y) => ({ x, y: y - 1 }),
-    [DIRECTIONS.S]: (x, y) => ({ x, y: y + 1 }),
-    [DIRECTIONS.W]: (x, y) => ({ x: x + 1, y }),
-    [DIRECTIONS.E]: (x, y) => ({ x: x - 1, y }),
+    [DIRECTIONS.N]: (x, y, dir) => ({ x, y: y - 1, dir }),
+    [DIRECTIONS.S]: (x, y, dir) => ({ x, y: y + 1, dir }),
+    [DIRECTIONS.W]: (x, y, dir) => ({ x: x + 1, y, dir }),
+    [DIRECTIONS.E]: (x, y, dir) => ({ x: x - 1, y, dir }),
   },
 };
 
