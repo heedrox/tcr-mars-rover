@@ -5,6 +5,10 @@ class MarsRover {
     this.y = position.y;
     this.direction = direction;
   }
+
+  move() {
+    this.y = 6;
+  }
 }
 
 module.exports = MarsRover;

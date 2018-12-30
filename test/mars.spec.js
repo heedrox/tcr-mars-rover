@@ -14,4 +14,13 @@ describe('Mars Rover Kata', () => {
       expect(marsRover.direction).to.equal('N');
     });
   });
+  describe('when moving', () => {
+    it('moves forward', () => {
+      const marsRover = new MarsRover({x: 5, y: 5}, 'N');
+
+      marsRover.move();
+
+      expect(marsRover.y).to.equal(6);
+    });
+  });
 });
