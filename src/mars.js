@@ -16,7 +16,7 @@ class MarsRover {
 
   executeCommand(command) {
     const newPos = this.commands[command][this.direction](this.x, this.y, this.direction);
-    if ((newPos.x === 3)&&(newPos.y === 10)) {
+    if (this.obstacles && ((newPos.x === this.obstacles[0].x)&&(newPos.y === this.obstacles[y].y))) {
       throw new Error();
     }
     this.moveTo(newPos);
