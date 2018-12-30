@@ -34,5 +34,19 @@ describe('Mars Rover Kata', () => {
       });
     });
   });
-  
+  describe('when moving backwards', () => {
+    const cases = [
+      { pos: { x: 5, y: 5 }, dir: DIRECTIONS.N, command: 'b', expected: { x: 5, y: 4 } },
+    ];
+    cases.forEach((tcase) => {
+      it(`moves - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
+        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir);
+
+        marsRover.move([tcase.command]);
+
+        expect(marsRover.x).to.equal(tcase.expected.x);
+        expect(marsRover.y).to.equal(tcase.expected.y);
+      });
+    });
+  });
 });
