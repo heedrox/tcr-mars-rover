@@ -98,6 +98,14 @@ describe('Mars Rover Kata', () => {
       expect(marsRover.obstacles).to.eql(OBSTACLES);
     });
 
-    it('')
+    it('throws error when obstacle found', () => {
+      const marsRover = new MarsRover({ x: 3, y: 9 }, DIRECTIONS.N, COMMANDS, [
+        {x: 3, y: 10}
+      ]);
+
+      expect(() => {
+        marsRover.execute(['f', 'f']);
+      }).to.throw();
+    });
   });
 });
