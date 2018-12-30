@@ -8,7 +8,7 @@ class MarsRover {
     this.direction = direction;
   }
 
-  move(commands) {
+  execute(commands) {
     if (commands[0] === 'f') {
       if (this.direction === DIRECTIONS.N) {
         this.y = this.y + 1;

@@ -33,7 +33,7 @@ describe('Mars Rover Kata', () => {
       it(`moves - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
         const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir);
 
-        marsRover.move([tcase.command]);
+        marsRover.execute([tcase.command]);
 
         expect(marsRover.x).to.equal(tcase.expected.x);
         expect(marsRover.y).to.equal(tcase.expected.y);
