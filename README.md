@@ -14,6 +14,10 @@ Learn more about this here:
 
 https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864
 
+# About TCR-CLI
+
+tcr-cli is the command line interface I developed that has all the test && (commit || revert) logic.
+
 # This repo
 
 This repo is an attempt to make this TCR work in a real environment, using GIT.

@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "coverage": "istanbul cover _mocha",
-    "test": "mocha --color",
     "tdd": "mocha -w",
-    "tcr": "node tcr-lib/index.js",
+    "tcr": "tcr-cli",
+    "test": "mocha --color",
     "commit": "git add --all && git commit -m \"$COMMIT_MSG\" && echo 'commited'",
     "revert": "git checkout HEAD -- src && git reset HEAD src/ -- && git clean -fd && echo 'reverted'",
     "push": "git push"
@@ -29,7 +29,8 @@
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^5.2.0",
     "sinon": "^7.2.2",
-    "sinon-chai": "^3.3.0"
+    "sinon-chai": "^3.3.0",
+    "tcr-cli": "^1.0.0"
   },
   "dependencies": {}
 }
