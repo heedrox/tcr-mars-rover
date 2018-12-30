@@ -21,7 +21,6 @@ class MarsRover {
   execute(commands) {
     commands.forEach((command) => this.executeCommand(command));
   }
-
 }
 
 module.exports = MarsRover;
