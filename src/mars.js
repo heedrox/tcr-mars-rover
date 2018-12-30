@@ -7,7 +7,11 @@ class MarsRover {
   }
 
   move() {
-    this.y = this.y + 1;
+    if (this.direction === 'N') {
+      this.y = this.y + 1;
+    } else {
+      this.y = this.y - 1;
+    }
   }
 }
 

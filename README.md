@@ -41,6 +41,8 @@ And to test also tcr-cli.
 # Learnings and Reflections
 
 - Generally forces you to create two tests (the dummy and the one that really validates)
+- The commit history is based on test cases, and I think that's cool
+
 
 
 

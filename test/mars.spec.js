@@ -29,5 +29,13 @@ describe('Mars Rover Kata', () => {
         expect(marsRover.y).to.equal(tcase.expected.y);
       });
     });
+    it('moves forward based on the direction', () => {
+      const marsRover = new MarsRover({ x: 5, y: 5 }, 'S');
+
+      marsRover.move(['f']);
+
+      expect(marsRover.x).to.equal(5);
+      expect(marsRover.y).to.equal(4);
+    });
   });
 });
