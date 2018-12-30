@@ -1,16 +1,17 @@
 const { DIRECTIONS } = require('../src/constants');
+const COMMANDS = require('../src/commands');
 const MarsRover = require('../src/mars');
 
 describe('Mars Rover Kata', () => {
   describe('when constructing', () => {
     it('sets initial position', () => {
-      const marsRover = new MarsRover({ x: 0, y: 0 });
+      const marsRover = new MarsRover({ x: 0, y: 0 }, 'N', COMMANDS);
 
       expect(marsRover.x).to.equal(0);
       expect(marsRover.y).to.equal(0);
     });
     it('sets facing direction', () => {
-      const marsRover = new MarsRover({ x: 0, y: 0 }, 'N');
+      const marsRover = new MarsRover({ x: 0, y: 0 }, 'N', COMMANDS);
 
       expect(marsRover.direction).to.equal('N');
     });
@@ -31,7 +32,7 @@ describe('Mars Rover Kata', () => {
     ];
     cases.forEach((tcase) => {
       it(`executes commands - case ${tcase.pos.x}/${tcase.pos.y} / ${tcase.dir} / ${tcase.command}`, () => {
-        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir);
+        const marsRover = new MarsRover({ x: tcase.pos.x, y: tcase.pos.y }, tcase.dir, COMMANDS);
 
         marsRover.execute([tcase.command]);
 
@@ -42,7 +43,7 @@ describe('Mars Rover Kata', () => {
   });
 
   it('executes several commands', () => {
-    const marsRover = new MarsRover({ x: 5, y: 5 }, DIRECTIONS.N);
+    const marsRover = new MarsRover({ x: 5, y: 5 }, DIRECTIONS.N, COMMANDS);
 
     marsRover.execute(['f','f']);
 
@@ -62,7 +63,7 @@ describe('Mars Rover Kata', () => {
     ];
     cases.forEach((tcase) => {
       it(`executes turn - case ${tcase.dir} / ${tcase.command}`, () => {
-        const marsRover = new MarsRover({ x: 5, y: 5 }, tcase.dir);
+        const marsRover = new MarsRover({ x: 5, y: 5 }, tcase.dir, COMMANDS);
 
         marsRover.execute([tcase.command]);
 
@@ -73,7 +74,7 @@ describe('Mars Rover Kata', () => {
 
   describe('when moving off the grid', () => {
     it('shows in the other side horizontally', () => {
-      const marsRover = new MarsRover({ x: 10, y: 5 }, DIRECTIONS.E);
+      const marsRover = new MarsRover({ x: 10, y: 5 }, DIRECTIONS.E, COMMANDS);
 
       marsRover.execute(['f', 'f']);
 
@@ -81,7 +82,7 @@ describe('Mars Rover Kata', () => {
     });
 
     it('shows in the other side vertically', () => {
-      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N);
+      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS);
 
       marsRover.execute(['f', 'f']);
 
@@ -91,7 +92,7 @@ describe('Mars Rover Kata', () => {
 
   describe('obstacle detection', () => {
     it('constructs with obstacles', () => {
-      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, []);
+      const marsRover = new MarsRover({ x: 5, y: 10 }, DIRECTIONS.N, COMMANDS);
 
       marsRover.execute(['f', 'f']);
 
