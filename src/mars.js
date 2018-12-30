@@ -15,6 +15,8 @@ const moveCommands = {
   },
 };
 
+const isMovingCommand = command => ((command === 'f')||(command === 'b'));
+
 class MarsRover {
 
   constructor(position, direction) {
@@ -29,7 +31,7 @@ class MarsRover {
   }
 
   executeCommand(command) {
-    if ((command === 'f')||(command === 'b')) {
+    if (isMovingCommand(command)) {
       const newPos = moveCommands[command][this.direction](this.x, this.y);
       this.moveTo(newPos);
     }
