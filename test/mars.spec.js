@@ -31,7 +31,7 @@ describe('Mars Rover Kata', () => {
       });
     });
     it('moves forward based on the direction', () => {
-      const marsRover = new MarsRover({ x: 5, y: 5 }, 'S');
+      const marsRover = new MarsRover({ x: 5, y: 5 }, DIRECTIONS.S);
 
       marsRover.move(['f']);
 
