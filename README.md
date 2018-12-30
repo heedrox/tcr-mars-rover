@@ -38,4 +38,9 @@ This repo is an attempt to test if TCR can work in a real environment (at least 
 
 And to test also tcr-cli.
 
+# Learnings and Reflections
+
+
+
+
 
