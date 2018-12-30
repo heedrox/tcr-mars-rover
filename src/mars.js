@@ -14,11 +14,15 @@ class MarsRover {
     this.direction = newPos.direction;
   }
 
-  executeCommand(command) {
-    const newPos = this.commands[command][this.direction](this.x, this.y, this.direction);
+  stopAndThrowErrorIfObstacle(newPos) {
     if (this.obstacles && ((newPos.x === this.obstacles[0].x)&&(newPos.y === this.obstacles[y].y))) {
       throw new Error();
     }
+  }
+
+  executeCommand(command) {
+    const newPos = this.commands[command][this.direction](this.x, this.y, this.direction);
+    this.stopAndThrowErrorIfObstacle(newPos);
     this.moveTo(newPos);
   }
 
