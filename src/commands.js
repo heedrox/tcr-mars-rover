@@ -18,7 +18,13 @@ const COMMANDS = {
     [DIRECTIONS.W]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.S }),
     [DIRECTIONS.S]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.E }),
     [DIRECTIONS.E]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.N }),
-  }
+  },
+  'r': {
+    [DIRECTIONS.N]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.E }),
+    [DIRECTIONS.W]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.N }),
+    [DIRECTIONS.S]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.W }),
+    [DIRECTIONS.E]: (x, y, direction) => ({ x, y, direction: DIRECTIONS.S }),
+  },
 };
 
 module.exports.COMMANDS = COMMANDS;
