@@ -1,5 +1,5 @@
 const { DIRECTIONS } = require('../src/constants');
-const COMMANDS = require('../src/commands');
+const { COMMANDS } = require('../src/commands');
 const MarsRover = require('../src/mars');
 
 describe('Mars Rover Kata', () => {

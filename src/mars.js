@@ -1,5 +1,3 @@
-const { COMMANDS } = require('./commands');
-
 class MarsRover {
 
   constructor(position, direction, commands) {
@@ -16,8 +14,7 @@ class MarsRover {
   }
 
   executeCommand(command) {
-    console.log(this.commands);
-    const newPos = COMMANDS[command][this.direction](this.x, this.y, this.direction);
+    const newPos = this.commands[command][this.direction](this.x, this.y, this.direction);
     this.moveTo(newPos);
   }
 
