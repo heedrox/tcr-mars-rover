@@ -23,6 +23,11 @@ class MarsRover {
     this.direction = direction;
   }
 
+  moveTo(newPos) {
+    this.x = newPos.x;
+    this.y = newPos.y;
+  }
+
   executeCommand(command) {
     const result = moveCommands[command][this.direction](this.x, this.y);
     this.x = result.x;
