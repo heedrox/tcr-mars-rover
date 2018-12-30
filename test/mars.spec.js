@@ -48,4 +48,19 @@ describe('Mars Rover Kata', () => {
 
     expect(marsRover.y).to.equal(7);
   });
+
+  describe.skip('when turning', () => {
+    const cases = [
+      { dir: DIRECTIONS.N, command: 'l', expectedDir: DIRECTIONS.W },
+    ];
+    cases.forEach((tcase) => {
+      it(`executes turn - case ${tcase.dir} / ${tcase.command}`, () => {
+        const marsRover = new MarsRover({ x: 5, y: 5 }, tcase.dir);
+
+        marsRover.execute([tcase.command]);
+
+        expect(marsRover.direction).to.equal(tcase.expectedDir);
+      });
+    });
+  });
 });
